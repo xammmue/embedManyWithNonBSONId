@@ -36,6 +36,4 @@ class Fruit
     {
         return $this->ripe;
     }
-
-
 }

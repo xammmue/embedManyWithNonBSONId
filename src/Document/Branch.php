@@ -11,7 +11,13 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations\EmbedMany;
 #[EmbeddedDocument]
 class Branch
 {
-    #[EmbedMany(discriminatorField: Fruit::DISCRIMINATOR_FIELD, discriminatorMap: Fruit::DISCRIMINATOR_MAP)]
+    #[
+        EmbedMany(
+            //targetDocument: Fruit::class,
+            discriminatorField: Fruit::DISCRIMINATOR_FIELD,
+            discriminatorMap: Fruit::DISCRIMINATOR_MAP
+        )
+    ]
     private Collection $fruits;
 
     public function __construct(array $fruits)

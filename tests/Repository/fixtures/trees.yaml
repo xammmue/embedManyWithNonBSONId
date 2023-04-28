@@ -1,0 +1,39 @@
+App\Document\Tree:
+    tree_1:
+        __construct:
+            - ['@branch_1']
+    tree_2:
+        __construct:
+            - ['@branch_2']
+
+App\Document\Branch:
+    branch_1:
+        __construct:
+            - ['@apple_1', '@mango_1']
+    branch_2:
+        __construct:
+            - ['@apple_2', '@mango_2']
+
+App\Document\Apple:
+    apple_1:
+        __construct:
+            id: '<uuid()>'
+            ripe: false
+            appleSpecificProperty: 'one'
+    apple_2:
+        __construct:
+            id: '<uuid()>'
+            ripe: true
+            appleSpecificProperty: 'two'
+
+App\Document\Mango:
+    mango_1:
+        __construct:
+            id: '<uuid()>'
+            ripe: false
+            mangoSpecificProperty: 'foo'
+    mango_2:
+        __construct:
+            id: '<uuid()>'
+            ripe: true
+            mangoSpecificProperty: 'bar'

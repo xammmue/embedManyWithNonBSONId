@@ -19,8 +19,6 @@ services:
 
     mongo:
         image: mongo:4.0
-        ports:
-            - "27018:27017"
         environment:
             MONGO_INITDB_ROOT_USERNAME: dbuser
             MONGO_INITDB_ROOT_PASSWORD: dbpw
